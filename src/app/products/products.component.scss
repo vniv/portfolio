@@ -1,0 +1,82 @@
+.content {
+    padding-left: 10%;
+    
+}
+  
+.content > mat-card {
+    width: 200px;
+    
+}
+.mat-elevation-z4 {
+    border: 1px solid;
+    margin: 4%;
+}
+.card-title {
+    justify-content: center;
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+.img-card {
+    height: 300px;
+    object-fit: contain;
+}
+
+mat-card {
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  mat-card:hover {
+    transform: scale(1.05);
+  }
+  
+  mat-card-header {
+    background-color: #e53935;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  mat-card-title {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    vertical-align: middle;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1em;
+    color: #ddd;
+  }
+  
+  mat-card-content {
+    color: #555;
+    padding: 20px;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Add a button style */
+  button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #c62828;
+  }

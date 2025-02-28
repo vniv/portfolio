@@ -1,0 +1,28 @@
+<app-sidenav></app-sidenav>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div
+        fxFlex="25%"
+        fxFlex.xs="100%"
+        fxFlex.sm="33%"
+        *ngFor="let comps of compsData"
+      >
+        <mat-card class="mat-elevation-z4">
+         
+          <img
+            class="img-card"
+            mat-card-image
+            src={{comps.image}}
+          />
+          <mat-card-title class="card-title">{{comps.name}}</mat-card-title>
+          <mat-card-content>
+            <p>The Himalayas is a mountain range in Asia.</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>

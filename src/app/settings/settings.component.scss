@@ -1,0 +1,23 @@
+
+.about {
+    background-color: #112240;
+    padding: 100px 0;
+    padding-left: 50%;
+    display: flex;
+    justify-content: center;
+    .about-content {
+      display: flex;
+      align-items: center;
+      .about-photo {
+        border-radius: 50%;
+        width: 150px;
+        margin-right: 50px;
+      }
+      .about-text {
+        color: #ccd6f6;
+        h2 {
+          color: #64ffda;
+        }
+      }
+    }
+  }

@@ -1,0 +1,30 @@
+<div class="body" [ngClass]="getBodyClass()">
+    <div class="row">
+        <div class="col-md-12">
+          <ul class="timeline" >
+            <li class="timeline-item" *ngFor="let data of dataReals">
+              <div class="timeline-badge">
+                <i class="glyphicon glyphicon-check">
+                  <mat-icon>{{data.iconTimeline}}</mat-icon>
+                </i>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">{{data.title}}</h4>
+                  <p class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.projet}}</p>
+                </div>
+                <div class="timeline-body" *ngFor="let comp of data.comps">
+                    <div *ngIf="comp.isTech == true">
+                      <button class="btn-comp-tech" mat-raised-button color="primary">{{comp.btnName}}</button>
+                    </div>
+                    <div *ngIf="comp.isTech == false">
+                      <button class="btn-comp-hum" mat-raised-button color="primary">{{comp.btnName}}</button>
+                    </div>   
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+</div>

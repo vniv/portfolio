@@ -1,0 +1,26 @@
+<div #skillsContainer class="skills-container">
+    <h2>COMPÉTENCES</h2>
+    <p>
+      Elles sont en constantes améliorations car pour moi la joie de ce métier fait que l'on en apprend tous les jours, d'autant plus en étant impliqué, curieux et passionné.
+    </p>
+  
+    <!-- Exemple pour une section de compétences -->
+    <div *ngFor="let skill of skills" class="skill">
+      <span>{{ skill.name }}</span>
+      <mat-progress-bar mode="determinate" [value]="skill.currentValue"></mat-progress-bar>
+    </div>
+
+    <!-- Section affichage du CV -->
+    <div class="cv-section">
+        <h2>Mon CV</h2>
+        <!-- Affichage du PDF dans un iframe -->
+        <div class="image-container">
+            <img src="assets/CV.png" alt="CV Image" />
+        </div>
+        
+        <!-- Bouton pour télécharger le PDF -->
+        <a href="assets/CV_ValentinNivesse.pdf" download>
+        <button mat-raised-button>Télécharger CV en PDF</button>
+        </a>
+    </div>
+</div>
