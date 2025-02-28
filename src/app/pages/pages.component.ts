@@ -11,19 +11,19 @@ export class PagesComponent implements OnInit {
 
   // Les valeurs initiales des compétences
   skills = [
-    { name: 'PHP', value: 85, currentValue: 0 },
+    { name: 'JAVA', value: 85, currentValue: 0 },
     { name: 'SQL', value: 75, currentValue: 0 },
-    { name: 'SYMFONY', value: 60, currentValue: 0 },
-    { name: 'SMARTY', value: 50, currentValue: 0 },
-    { name: 'CODEIGNITER', value: 45, currentValue: 0 },
-    { name: 'HTML', value: 90, currentValue: 0 },
-    { name: 'CSS', value: 85, currentValue: 0 },
-    { name: 'JAVASCRIPT / JQUERY', value: 70, currentValue: 0 },
-    { name: 'WORDPRESS', value: 55, currentValue: 0 },
-    { name: 'PRESTASHOP', value: 80, currentValue: 0 },
-    { name: 'WINDOWS', value: 90, currentValue: 0 },
-    { name: 'LINUX', value: 65, currentValue: 0 }
+    { name: 'ANGULAR', value: 60, currentValue: 0 },
+    { name: 'GIT', value: 50, currentValue: 0 },
+    { name: 'J2EE', value: 45, currentValue: 0 },
+    { name: 'UX/UI', value: 90, currentValue: 0 },
+    { name: 'AGILITE', value: 85, currentValue: 0 },
+    { name: 'RESOLUTION DE PROBLEME', value: 70, currentValue: 0 },
+    { name: 'REDACTION DE DOCUMENT', value: 55, currentValue: 0 },
+    { name: 'AUTONOMIE', value: 80, currentValue: 0 }
   ];
+
+  hoveredSkill: any = null;
 
   private observer!: IntersectionObserver;
 

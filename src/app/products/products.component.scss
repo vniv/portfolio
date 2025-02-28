@@ -1,6 +1,6 @@
 .content {
-    padding-left: 10%;
-    
+  padding-left: 10%;
+  background-color: #0a192f;
 }
   
 .content > mat-card {
@@ -55,6 +55,8 @@ mat-card {
   mat-card-content {
     color: #555;
     padding: 20px;
+    border-left: solid #2d6c8b;
+    margin: 2%;
   }
   
   mat-card-actions {
@@ -68,7 +70,7 @@ mat-card {
   
   /* Add a button style */
   button {
-    background-color: #e53935;
+    background-color: #2d6c8b;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -79,4 +81,40 @@ mat-card {
   
   button:hover {
     background-color: #c62828;
+  }
+
+
+
+  /* Conteneur de la flèche avec fond */
+.arrow-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px; /* Largeur du coin */
+  height: 60px; /* Hauteur du coin */
+  background: #2d6c8b; /* Couleur du fond */
+  clip-path: polygon(100% 0, 0 0, 100% 100%); /* Découpe en triangle */
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  z-index: 10;  
+}
+
+/* Style de l'icône */
+.arrow-icon {
+  font-size: 24px;
+  margin: 10%;
+  color: white; /* Icône blanche pour contraster */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow-icon:hover {
+  transform: scale(1.2);
+}
+  
+
+  mat-card {
+    position: relative;
+    overflow: hidden;
   }

@@ -35,6 +35,48 @@ mat-progress-bar .mat-progress-bar-fill {
   background-color: #64ffda !important;  /* Couleur de la progression */
 }
 
+.progress-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.progress-value {
+  position: absolute;
+  top: -20px; /* Positionne au-dessus de la barre */
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #64ffda; /* Couleur qui correspond au design */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+//------
+
+.progress-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.progress-value {
+  position: absolute;
+  top: -20px; /* Positionne au-dessus de la barre */
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #64ffda; /* Couleur qui correspond au design */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+//------------
+
 .cv-section {
   margin-top: 40px;
   text-align: center;

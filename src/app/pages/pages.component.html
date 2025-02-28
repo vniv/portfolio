@@ -7,7 +7,10 @@
     <!-- Exemple pour une section de compétences -->
     <div *ngFor="let skill of skills" class="skill">
       <span>{{ skill.name }}</span>
-      <mat-progress-bar mode="determinate" [value]="skill.currentValue"></mat-progress-bar>
+      <div class="progress-container" (mouseover)="hoveredSkill = skill" (mouseleave)="hoveredSkill = null">
+        <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar>
+        <span class="progress-value" *ngIf="hoveredSkill === skill">{{ skill.value }}%</span>
+      </div>
     </div>
 
     <!-- Section affichage du CV -->

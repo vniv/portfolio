@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'pages', component: PagesComponent },
   { path: '', component: StatisticsComponent },
-  { path: '**', component: SidenavComponent }
+  { path: '**', component: StatisticsComponent }
   
 ];
 
