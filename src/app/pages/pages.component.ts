@@ -1,9 +1,21 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.scss']
+  styleUrls: ['./pages.component.scss'],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.95)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0, transform: 'scale(0.95)' }))
+      ])
+    ])
+  ]
 })
 export class PagesComponent implements OnInit {
 
@@ -22,6 +34,35 @@ export class PagesComponent implements OnInit {
     { name: 'REDACTION DE DOCUMENT', value: 55, currentValue: 0 },
     { name: 'AUTONOMIE', value: 80, currentValue: 0 }
   ];
+
+  experiences = [
+    { title: 'Stage en développement web', company: 'Nicolas CAISSO, Distanciel', link: '#' },
+    { title: 'Création d’une micro-entreprise', company: 'Etabli 79, QUIMPER', link: '#' },
+    { title: 'Employée polyvalente', company: 'Cornouaille Diffusion, ERGUÉ GABERIC', link: '#' },
+    { title: 'Apprentie coiffeuse', company: 'Passage bleu, METZ', link: '#' },
+    { title: 'Bac +2 Développeur Web', company: 'La Digital School, BREST', link: '#' },
+    { title: 'CAP Coiffure', company: 'CFA de METZ', link: '#' },
+    { title: 'Bac Littéraire', company: 'Lycée de la communication, METZ', link: '#' }
+  ];
+
+  categories = ['Tous', 'Web', 'Prototype Figma', 'Design'];
+  selectedCategory = 'Tous';
+
+  projects = [
+    { title: 'Maquette Bed & Desk', category: 'Web', image: 'assets/java.png', link: '#' },
+    { title: 'Gameboy en 3D avec Blender', category: 'Design', image: 'assets/java.png', link: '#' },
+    { title: 'Application "Ma Gallery"', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
+    { title: 'Site Jonti Wild', category: 'Web', image: 'assets/java.png', link: '#' }
+  ];
+
+  get filteredProjects() {
+    if (this.selectedCategory === 'Tous') return this.projects;
+    return this.projects.filter(proj => proj.category === this.selectedCategory);
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+  }
 
   hoveredSkill: any = null;
 

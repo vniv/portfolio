@@ -13,6 +13,57 @@
       </div>
     </div>
 
+    <!-- Partie expérience -->
+    <div class="experience-container">
+      <h2 class="subtitle">Mon expérience</h2>
+    
+      <div class="grid-container">
+        <mat-card *ngFor="let exp of experiences" class="experience-card">
+          <mat-card-header>
+            <mat-card-title class="card-title">{{ exp.title }}</mat-card-title>
+            <mat-card-subtitle class="card-company">{{ exp.company }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions>
+            <a [href]="exp.link" class="view-link">Voir plus →</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+
+    <!-- Section affichage des projets -->
+    <div class="portfolio-container">
+      <h2 class="subtitle">Mes projets</h2>
+    
+      <div class="filter-buttons">
+        <button *ngFor="let category of ['Tous', 'Web', 'Prototype Figma', 'Design']"
+                mat-button 
+                [class.active]="selectedCategory === category"
+                (click)="selectCategory(category)">
+          {{ category }}
+        </button>
+      </div>
+    
+      <div class="projects-grid">
+        <mat-card *ngFor="let project of filteredProjects" 
+            class="project-card" 
+            @fade>
+          
+          <div class="image-container">
+            <img mat-card-image [src]="project.image" alt="{{ project.title }}">
+          </div>
+
+          <mat-card-header>
+            <mat-card-title>{{ project.title }}</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-actions>
+            <a [href]="project.link" class="view-link">Voir plus →</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
     <!-- Section affichage du CV -->
     <div class="cv-section">
         <h2>Mon CV</h2>
@@ -26,4 +77,7 @@
         <button mat-raised-button>Télécharger CV en PDF</button>
         </a>
     </div>
+
+    
+    
 </div>
