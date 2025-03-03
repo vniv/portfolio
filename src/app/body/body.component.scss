@@ -111,7 +111,7 @@ $brand-danger: #ba1f1f;
       background: #ffffff;
       -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-      background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+      background: linear-gradient(110deg, #6C5B7B 60%, #8e7b9e 60%);
       transition: transform 0.3s ease-in-out;
       
       .explic {
@@ -134,12 +134,14 @@ $brand-danger: #ba1f1f;
         right: 0;
         margin: 15px 20px 15px 20px;
         padding: 3%;
+        background-color: #4A50A3;
       }
       .btn-comp-hum {
         right: 0;
         margin: 15px 20px 15px 20px;
         padding: 3%;
-        background-color: darkorange;
+        background-color: #F79E1B;
+        
       }
       .timeline-body > p,
       .timeline-body > ul {

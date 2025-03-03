@@ -1,5 +1,6 @@
 .content {
   padding-left: 10%;
+  max-width: 100%;
   background-color: #0a192f;
 }
   
@@ -23,7 +24,6 @@
 
 mat-card {
     max-width: 400px;
-    margin: 20px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -92,7 +92,7 @@ mat-card {
   right: 0;
   width: 60px; /* Largeur du coin */
   height: 60px; /* Hauteur du coin */
-  background: #2d6c8b; /* Couleur du fond */
+  background: #6C5B7B; /* Couleur du fond */
   clip-path: polygon(100% 0, 0 0, 100% 100%); /* Découpe en triangle */
   display: flex;
   align-items: baseline;

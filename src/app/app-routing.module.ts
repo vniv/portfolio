@@ -5,11 +5,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { PagesComponent } from './pages/pages.component';
+import { CoupensComponent } from './coupens/coupens.component';
 
 const routes: Routes = [
   { path: 'appbar', component: DashboardComponent },
   { path: 'dashboard', component: SidenavComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'propos', component: CoupensComponent },
   { path: 'pages', component: PagesComponent },
   { path: '', component: StatisticsComponent },
   { path: '**', component: StatisticsComponent }

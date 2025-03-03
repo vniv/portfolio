@@ -34,7 +34,7 @@ export const navbarData = [
         ]
     },
     {
-        routerLink: '/settings',
+        routerLink: '/propos',
         icon: 'forum',
         label: 'Contact'
     },

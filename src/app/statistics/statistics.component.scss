@@ -6,14 +6,15 @@ header {
     display: flex;
     flex-direction: column; /* Center the content vertically */
     padding: 20px;
-    z-index: 1000;/* Ensure it stays on top of other elements */
+    z-index: 500;/* Ensure it stays on top of other elements */
+    top: 40%;
   
     .navbar {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-left: 60%;
-      margin-top: 20%;
+      
   
       .logo {
         margin-bottom: 40px;
@@ -83,4 +84,9 @@ header {
     .sidenav-link-text {
         color: #000;
     }
+}
+
+.footer {
+  height: 100px;
+  background-image: url("/assets/CSS footer animation.html");
 }
