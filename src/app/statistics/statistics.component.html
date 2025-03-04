@@ -3,49 +3,12 @@
 
 
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#home">Your Name</a>
-      </div>
   
-      <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-          <div class="links" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <a class="sidenav-nav-link" [routerLink]="data.routerLink">
-              <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
-              <span class="sidenav-link-text">{{data.label}}</span>
-            </a>
-            <!-- Conditionally display menu trigger and menu if data.items is defined -->
-            <ng-container *ngIf="data.items && data.items.length > 0" class="comps">
-              <i [matMenuTriggerFor]="menuElement"><mat-icon>arrow_right</mat-icon></i>
-              <mat-menu class="sub-comp" #menuElement="matMenu">
-                <ng-container class="sub-comp-tech" *ngFor="let item of data.items">
-                  <button *ngIf="item.isTech" mat-menu-item [routerLink]="item.routerLink">{{item.label}}</button>
-                </ng-container>
-                <ng-container class="sub-comp-hum" *ngFor="let item of data.items">
-                  <button *ngIf="!item.isTech" mat-menu-item [routerLink]="item.routerLink">{{item.label}}</button>
-                </ng-container>
-              </mat-menu>
-            </ng-container>
-
-            <ng-container *ngIf="data.reals && data.reals.length > 0" class="reals">
-              <i [matMenuTriggerFor]="menuElement"><mat-icon>arrow_right</mat-icon></i>
-              <mat-menu class="sub-real" yPosition="above" #menuElement="matMenu">
-                <ng-container class="sub-real" *ngFor="let real of data.reals">
-                  <button mat-menu-item [routerLink]="real.routerLink">{{real.label}}</button>
-                </ng-container>
-              </mat-menu>
-            </ng-container>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
 
   <app-settings></app-settings>
   <app-body></app-body>
   <app-pages></app-pages>
+  <app-navbar></app-navbar>
 
 
 

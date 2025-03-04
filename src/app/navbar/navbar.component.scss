@@ -1,0 +1,36 @@
+.menu-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    z-index: 1200;
+  }
+  
+  .menu-item {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .menu-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-item.active {
+    background: #6C5B7B; /* Bleu Material Design */
+    color: white;
+  }
+
+  .material-icons {
+    color: #ffffff;
+  }
+  

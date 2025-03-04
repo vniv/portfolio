@@ -35,24 +35,49 @@ export class PagesComponent implements OnInit {
     { name: 'AUTONOMIE', value: 80, currentValue: 0 }
   ];
 
+  currentSlide = 0; // Indice du slide visible
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % 2;
+  }
+
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + 2) % 2;
+  }
+
+  techSkills = [
+    { name: 'Javascript', level: 'Intermédiaire', icon: 'javascript' },
+    { name: 'SQL', level: 'Intermédiaire', icon: 'storage' },
+    { name: 'Angular', level: 'Les bases', icon: 'desktop_windows' },
+    { name: 'Git', level: 'Intermédiaire', icon: 'web' },
+    { name: 'J2EE', level: 'Les bases', icon: 'password' },
+    { name: 'UX/UI', level: 'Les bases', icon: 'code' },
+  ];  
+  humSkills = [
+    { name: 'Autonomie', level: 'Intermédiaire', icon: 'code' },
+    { name: 'Résolution de problème', level: 'Intermédiaire', icon: 'chat_error' },
+    { name: 'Rédaction de document', level: 'Les bases', icon: 'file_present' },
+    { name: 'Méthode Agile', level: 'Intermédiaire', icon: 'recycle' },
+  ]; 
+
   experiences = [
-    { title: 'Stage en développement web', company: 'Nicolas CAISSO, Distanciel', link: '#' },
-    { title: 'Création d’une micro-entreprise', company: 'Etabli 79, QUIMPER', link: '#' },
-    { title: 'Employée polyvalente', company: 'Cornouaille Diffusion, ERGUÉ GABERIC', link: '#' },
-    { title: 'Apprentie coiffeuse', company: 'Passage bleu, METZ', link: '#' },
-    { title: 'Bac +2 Développeur Web', company: 'La Digital School, BREST', link: '#' },
-    { title: 'CAP Coiffure', company: 'CFA de METZ', link: '#' },
-    { title: 'Bac Littéraire', company: 'Lycée de la communication, METZ', link: '#' }
+    { title: 'Alternant Developpeur junior', company: 'CGI', link: '#' },
+    { title: 'Stage en développement web', company: 'CGI', link: '#' },
+    { title: 'Bachelor Ingenierie Logiciel', company: 'ESIEA : Etxe Logistika', link: '#' },
+    { title: 'Licence CCRSEE', company: 'La Digital School, BREST', link: '#' },
+    { title: 'BTS CRSA', company: 'CFA de METZ', link: '#' },
+    { title: 'Bac Scientifique', company: 'Lycée de la communication, METZ', link: '#' }
   ];
 
   categories = ['Tous', 'Web', 'Prototype Figma', 'Design'];
   selectedCategory = 'Tous';
 
   projects = [
-    { title: 'Maquette Bed & Desk', category: 'Web', image: 'assets/java.png', link: '#' },
-    { title: 'Gameboy en 3D avec Blender', category: 'Design', image: 'assets/java.png', link: '#' },
-    { title: 'Application "Ma Gallery"', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
-    { title: 'Site Jonti Wild', category: 'Web', image: 'assets/java.png', link: '#' }
+    { title: 'Application mobile Blue Ice', category: 'Web', image: 'assets/java.png', link: '#' },
+    { title: 'Application web Link&Trade', category: 'Design', image: 'assets/java.png', link: '#' },
+    { title: 'Application Windows Simpl-E', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
+    { title: 'Projet IT Grand Angle', category: 'Web', image: 'assets/java.png', link: '#' },
+    { title: 'Projet IT En cours', category: 'Web', image: 'assets/java.png', link: '#' }
   ];
 
   get filteredProjects() {
@@ -95,4 +120,5 @@ export class PagesComponent implements OnInit {
     });
   }
 }
+
 

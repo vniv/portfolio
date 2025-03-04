@@ -1,0 +1,20 @@
+<div class="menu-bar">
+    <button class="menu-item" (click)="scrollTo('home')" [class.active]="activeSection === 'home'">
+        <span class="material-icons">home</span>
+    </button>
+    <button class="menu-item" (click)="scrollTo('competences')" [class.active]="activeSection === 'competences'">
+        <span class="material-icons">book</span>
+    </button>
+    <button class="menu-item" (click)="scrollTo('experiences')" [class.active]="activeSection === 'experiences'">
+        <span class="material-icons">school</span>
+    </button>
+    <button class="menu-item" (click)="scrollTo('projets')" [class.active]="activeSection === 'projets'">
+        <span class="material-icons">work_history</span>
+    </button>
+    <button class="menu-item" (click)="scrollTo('cv')" [class.active]="activeSection === 'cv'">
+        <span class="material-icons">description</span>
+    </button>
+    <button class="menu-item" (click)="scrollTo('contact')" [class.active]="activeSection === 'contact'">
+        <span class="material-icons">description</span>
+    </button>
+</div>

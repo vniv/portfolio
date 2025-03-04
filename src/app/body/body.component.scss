@@ -116,12 +116,14 @@ $brand-danger: #ba1f1f;
       
       .explic {
         margin: 1%;
+        color: #ffffff;
       }
       .timeline-title {
         text-align: right;
         margin-top: 0;
         font-size: x-large;
-        color: #2d6c8b;
+        font-weight: bold;
+        color: #ffffff;
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -163,7 +165,7 @@ $brand-danger: #ba1f1f;
   }
   .timeline-item:nth-child(even) {
     .timeline-panel {
-      float: right;
+      float: left;
       text-align: left;
 
       .timeline-title {
