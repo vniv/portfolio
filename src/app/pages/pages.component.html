@@ -6,6 +6,33 @@
   
     <!-- Exemple pour une section de compétences -->
      <section id="competences">
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="skillsItem-item" *ngFor="let skill of techSkills">
+            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
+            <div class="skillsItem-text">
+              <strong>{{ skill.name }}</strong>
+              <span>{{ skill.level }}</span>
+            </div>
+          </div>
+          <!-- Duplication des logos pour l'effet infini -->
+          <div class="skillsItem-item" *ngFor="let skill of techSkills">
+            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
+            <div class="skillsItem-text">
+              <strong>{{ skill.name }}</strong>
+              <span>{{ skill.level }}</span>
+            </div>
+          </div>
+          <div class="skillsItem-item" *ngFor="let skill of techSkills">
+            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
+            <div class="skillsItem-text">
+              <strong>{{ skill.name }}</strong>
+              <span>{{ skill.level }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="skillsItem">
           <div class="skillsItem-cards">
             <mat-card class="skillsItem-card">

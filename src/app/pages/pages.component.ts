@@ -21,18 +21,29 @@ export class PagesComponent implements OnInit {
 
   @ViewChild('skillsContainer', { static: true }) skillsContainer!: ElementRef;  // Référence à l'élément HTML
 
+  logos = [
+    'assets/cgoLogo.jpg',
+    'assets/EsieaLogo.png',
+    'assets/EtxeLogo.png',
+    'assets/SimpleLogo.png',
+    'assets/BlueiceLogo.png',
+    'assets/BordaLogo.png',
+    'assets/html5.svg',
+    'assets/css3.svg',
+  ];
+
   // Les valeurs initiales des compétences
   skills = [
-    { name: 'JAVA', value: 85, currentValue: 0 },
-    { name: 'SQL', value: 75, currentValue: 0 },
-    { name: 'ANGULAR', value: 60, currentValue: 0 },
-    { name: 'GIT', value: 50, currentValue: 0 },
-    { name: 'J2EE', value: 45, currentValue: 0 },
-    { name: 'UX/UI', value: 90, currentValue: 0 },
-    { name: 'AGILITE', value: 85, currentValue: 0 },
-    { name: 'RESOLUTION DE PROBLEME', value: 70, currentValue: 0 },
-    { name: 'REDACTION DE DOCUMENT', value: 55, currentValue: 0 },
-    { name: 'AUTONOMIE', value: 80, currentValue: 0 }
+    { name: 'JAVA', value: 85, currentValue: 0, color:'#E44D26', icon:'assets/skills/javascript.svg' },
+    { name: 'SQL', value: 75, currentValue: 0, color:'#264de4', icon:'assets/skills/sql.svg' },
+    { name: 'ANGULAR', value: 60, currentValue: 0, color:'#4F5B93', icon:'assets/skills/angular.svg' },
+    { name: 'GIT', value: 50, currentValue: 0, color:'#21759B', icon:'assets/skills/git.svg' },
+    { name: 'J2EE', value: 45, currentValue: 0, color:'#00758F', icon:'assets/skills/j2ee.svg' },
+    { name: 'UX/UI', value: 90, currentValue: 0, color:'#E76F00', icon:'assets/skills/html5.svg' },
+    { name: 'AGILITE', value: 85, currentValue: 0, color:'#222', icon:'assets/skills/agilite.svg' },
+    { name: 'RESOLUTION DE PROBLEME', value: 70, currentValue: 0, color:'#F7DF1E', icon:'assets/skills/problem-solving.svg' },
+    { name: 'REDACTION DE DOCUMENT', value: 55, currentValue: 0, color:'#E44D26', icon:'assets/skills/document-writing.svg' },
+    { name: 'AUTONOMIE', value: 80, currentValue: 0, color:'#E44D26', icon:'assets/skills/autonomy.svg' }
   ];
 
   currentSlide = 0; // Indice du slide visible
@@ -46,12 +57,12 @@ export class PagesComponent implements OnInit {
   }
 
   techSkills = [
-    { name: 'Javascript', level: 'Intermédiaire', icon: 'javascript' },
-    { name: 'SQL', level: 'Intermédiaire', icon: 'storage' },
-    { name: 'Angular', level: 'Les bases', icon: 'desktop_windows' },
-    { name: 'Git', level: 'Intermédiaire', icon: 'web' },
-    { name: 'J2EE', level: 'Les bases', icon: 'password' },
-    { name: 'UX/UI', level: 'Les bases', icon: 'code' },
+    { name: 'Javascript', level: 'Intermédiaire', icon:'assets/skills/javascript.svg' },
+    { name: 'SQL', level: 'Intermédiaire', icon:'assets/skills/sql.svg'  },
+    { name: 'Angular', level: 'Les bases', color:'#4F5B93', icon:'assets/skills/angular.svg' },
+    { name: 'Git', level: 'Intermédiaire', icon:'assets/skills/git.svg' },
+    { name: 'J2EE', level: 'Les bases', icon:'assets/skills/j2ee.svg'},
+    { name: 'UX/UI', level: 'Les bases', icon:'assets/skills/html5.svg' },
   ];  
   humSkills = [
     { name: 'Autonomie', level: 'Intermédiaire', icon: 'code' },
