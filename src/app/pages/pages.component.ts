@@ -45,6 +45,7 @@ export class PagesComponent implements OnInit {
     { name: 'REDACTION DE DOCUMENT', value: 55, currentValue: 0, color:'#E44D26', icon:'assets/skills/document-writing.svg' },
     { name: 'AUTONOMIE', value: 80, currentValue: 0, color:'#E44D26', icon:'assets/skills/autonomy.svg' }
   ];
+  
 
   currentSlide = 0; // Indice du slide visible
 
@@ -84,11 +85,11 @@ export class PagesComponent implements OnInit {
   selectedCategory = 'Tous';
 
   projects = [
-    { title: 'Application mobile Blue Ice', category: 'Web', image: 'assets/java.png', link: '#' },
-    { title: 'Application web Link&Trade', category: 'Design', image: 'assets/java.png', link: '#' },
-    { title: 'Application Windows Simpl-E', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
-    { title: 'Projet IT Grand Angle', category: 'Web', image: 'assets/java.png', link: '#' },
-    { title: 'Projet IT En cours', category: 'Web', image: 'assets/java.png', link: '#' }
+    { title: 'Application mobile Blue Ice', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' },
+    { title: 'Application web Link&Trade', overlayText: 'Description du projet 1', category: 'Design', image: 'assets/java.png', link: '#' },
+    { title: 'Application Windows Simpl-E', overlayText: 'Description du projet 1', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
+    { title: 'Projet IT Grand Angle', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' },
+    { title: 'Projet IT En cours', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' }
   ];
 
   get filteredProjects() {

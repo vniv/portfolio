@@ -283,13 +283,11 @@ $card-bg: #6C5B7B;
 // Grille des projets
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
-  max-width: 1000px;
 }
 
-// Cartes des projets
 .project-card {
   background-color: $card-bg;
   color: $text-light;
@@ -297,42 +295,52 @@ $card-bg: #6C5B7B;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  // Conteneur de l'image avec ratio fixe
-  .image-container {
-    width: 100%;
-    padding-top: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-  
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      max-width: 100%;
-    }
-  }
-  .view-link {
-    display: block;
-    color: #6366f1;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 8px;
-  
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
+  width: 100%;
+  height: 100%;
 }
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-content {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ajustez la hauteur selon vos besoins */
+  transition: transform 0.5s ease;
+}
+
+.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s; /* Ajout du délai pour l'apparition du texte */
+  box-sizing: border-box; /* Assure que le padding n'affecte pas la taille de l'overlay */
+}
+
+.image-content:hover {
+  transform: scale(1.4);
+}
+
+.image-content:hover .overlay {
+  opacity: 1;
+}
+
 
 
 

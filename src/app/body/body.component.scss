@@ -127,7 +127,15 @@ $brand-danger: #ba1f1f;
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        padding: 5%;
+        padding: 2% 5%;
+      }
+      .period {
+        text-align: right;
+        margin-top: 0;
+        font-size: x-large;
+        color: #ffffff;
+        width: 100%;
+        padding: 0% 5%;
       }
       .timeline-body {
         display: inline-table;

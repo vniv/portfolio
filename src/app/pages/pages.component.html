@@ -34,20 +34,7 @@
         </div>
       </div>
       <div class="skillsItem">
-          <div class="skillsItem-cards">
-            <mat-card class="skillsItem-card">
-              <h3>Compétences techniques</h3>
-              <div class="skillsItem-grid">
-                <div class="skillsItem-item" *ngFor="let skill of techSkills">
-                  <mat-icon class="skillsItem-icon">{{ skill.icon }}</mat-icon>
-                  <div class="skillsItem-text">
-                    <strong>{{ skill.name }}</strong>
-                    <span>{{ skill.level }}</span>
-                  </div>
-                </div>
-              </div>
-            </mat-card>
-          </div>
+          
 
           <div class="skillsItem-cards">
             <mat-card class="skillsItem-card">
@@ -70,64 +57,8 @@
           <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar>
           <span class="progress-value" *ngIf="hoveredSkill === skill">{{ skill.value }}%</span>
         </div>
-      </div>
-      
-     </section>
-
-     <!--<section id="competences" class="carousel-container">
-
-      <div class="slides">
-        <!-- Slide 1 : Barres de compétences
-        <div class="slide" [class.active]="currentSlide === 0">
-          <div *ngFor="let skill of skills" class="skill">
-            <span>{{ skill.name }}</span>
-            <div class="progress-container">
-              <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar>
-              <span class="progress-value">{{ skill.value }}%</span>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Slide 2 : Liste des compétences
-        <div class="slide" [class.active]="currentSlide === 1">
-          <mat-card class="skillsItem-card">
-            <h3>Développement Web</h3>
-            <div class="skillsItem-grid">
-              <div class="skillsItem-item" *ngFor="let skill of skillsItems">
-                <mat-icon class="skillsItem-icon">{{ skill.icon }}</mat-icon>
-                <div class="skillsItem-text">
-                  <strong>{{ skill.name }}</strong>
-                  <span>{{ skill.level }}</span>
-                </div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-      </div>
-    
-      <!-- Boutons de navigation 
-      <button class="nav-button left" (click)="prevSlide()">&#10094;</button>
-      <button class="nav-button right" (click)="nextSlide()">&#10095;</button>
-    
-    </section>-->
-    
-
-    <!-- Partie expérience -->
-    <section class="experience-container" id="experiences">
-      <h2 class="subtitle">Mes expériences</h2>
-    
-      <div class="grid-container">
-        <mat-card *ngFor="let exp of experiences" class="experience-card">
-          <mat-card-header>
-            <mat-card-title class="card-title">{{ exp.title }}</mat-card-title>
-            <mat-card-subtitle class="card-company">{{ exp.company }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-actions>
-            <a [href]="exp.link" class="view-link">Voir plus →</a>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-    </section>
+      </div>      
+     </section>    
 
 
     <!-- Section affichage des projets -->
@@ -144,24 +75,20 @@
       </div>
     
       <div class="projects-grid">
-        <mat-card *ngFor="let project of filteredProjects" 
-            class="project-card" 
-            @fade>
-          
-          <div class="image-container">
-            <img mat-card-image [src]="project.image" alt="{{ project.title }}">
+        <mat-card *ngFor="let project of filteredProjects" class="project-card" @fade>
+          <div class="image-container-projet">
+            <div class="image-content">
+              <img mat-card-image [src]="project.image" alt="{{ project.title }}">
+              <div class="overlay">
+                <p>{{ project.overlayText }}</p> </div>
+            </div>
           </div>
-
-          <mat-card-header>
-            <mat-card-title>{{ project.title }}</mat-card-title>
-          </mat-card-header>
-
-          <mat-card-actions>
-            <a [href]="project.link" class="view-link">Voir plus →</a>
-          </mat-card-actions>
+      
+          
         </mat-card>
       </div>
     </section>
+    
 
     <!-- Section affichage du CV -->
     <section id="cv" class="cv-section">
@@ -180,3 +107,7 @@
     
     
 </div>
+
+
+
+<app-dashboard></app-dashboard>

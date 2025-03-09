@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { realsData } from './dataReal'
+import { experienceData } from './dataExperience';
 
 @Component({
   selector: 'app-body',
@@ -10,7 +10,7 @@ export class BodyComponent {
 
   @Input() collapsed = false;
   @Input() screenWidth = 0;
-  dataReals = realsData;
+  dataReals = experienceData;
 
 
   getBodyClass(): string {

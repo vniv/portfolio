@@ -1,23 +1,56 @@
-
 .about {
-    background-color: #112240;
-    padding: 100px 0;
-    padding-left: 50%;
-    display: flex;
-    justify-content: center;
-    .about-content {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center; // Centre le contenu verticalement
+  min-height: 80vh; // Prend toute la hauteur de l'écran
+  width: 100%;
+
+  .about-content {
       display: flex;
       align-items: center;
+      text-align: center;
+
       .about-photo {
-        border-radius: 50%;
-        width: 150px;
-        margin-right: 50px;
+          border-radius: 50%;
+          width: 190px;
+          margin-right: 50px;
       }
       .about-text {
-        color: #ccd6f6;
-        h2 {
-          color: #64ffda;
-        }
+          color: #ccd6f6;
+          h2 {
+              color: #64ffda;
+          }
       }
-    }
+  }
+}
+
+  .profile-header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .text-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .text-content p {
+    font-size: 1.2em;
+    color: #777;
+  }
+  
+  .avatar-container {
+    margin: 30px 0;
+  }
+  
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .illustration {
+    max-width: 100%;
+    height: 600px;
   }
