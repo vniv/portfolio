@@ -63,11 +63,6 @@ export class SidenavComponent implements OnInit {
     this.onToggleSidenav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
   }
 
-  closeSidenav(): void {
-    this.collapsed = false;
-    this.onToggleSidenav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
-  }
-
   @HostListener('window:scroll', [])
   onScroll(): void {
     const currentScroll = window.scrollY || document.documentElement.scrollTop;
@@ -76,10 +71,8 @@ export class SidenavComponent implements OnInit {
       // Scroll vers le bas → Ouvrir la navbar
       this.collapsed = false;
       this.changeBackgroundColor('rgba(108, 91, 123, 1)');
-      this.changeColor('rgba(108, 91, 123, 1)');
     } else if (currentScroll == 0) {
       this.changeBackgroundColor('rgba(108, 91, 123, 0)');
-      this.changeColor('rgba(108, 91, 123, 1)');
       this.toggleCollapse();
     }
 
@@ -90,18 +83,6 @@ export class SidenavComponent implements OnInit {
   private changeBackgroundColor(color: string): void {
     if (this.sidenav) {
       this.renderer.setStyle(this.sidenav.nativeElement, 'background', color);
-    }
-  }
-
-  // Méthode pour changer la couleur de fond avec Renderer2
-  private changeColor(color: string): void {
-    if (this.icon) {
-      if(this.routerLinkActive) {
-        this.renderer.setStyle(this.icon.nativeElement, 'color', color);
-      } else {
-        this.renderer.setStyle(this.icon.nativeElement, 'color', 'rgba(0, 0, 0, 0)');
-      }
-      
     }
   }
 }

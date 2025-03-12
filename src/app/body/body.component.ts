@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { experienceData } from './dataExperience';
 
 @Component({
@@ -21,5 +21,22 @@ export class BodyComponent {
       styleClass = 'body-md-screen';
     }
     return styleClass;
+  }
+
+  ngAfterViewInit() {
+    this.onScroll();
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const items = document.querySelectorAll('.timeline-item');
+    const triggerPoint = window.innerHeight * 0.8; // Déclenche à 80% de la hauteur de l'écran
+
+    items.forEach((item: any) => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < triggerPoint) {
+        item.classList.add('visible');
+      }
+    });
   }
 }

@@ -78,9 +78,11 @@
         <mat-card *ngFor="let project of filteredProjects" class="project-card" @fade>
           <div class="image-container-projet">
             <div class="image-content">
-              <img mat-card-image [src]="project.image" alt="{{ project.title }}">
+              <video class="background-video" [src]="project.image" autoplay loop muted (error)="onVideoError()"></video>
+              <!--<img mat-card-image [src]="project.image" alt="{{ project.title }}">-->
               <div class="overlay">
-                <p>{{ project.overlayText }}</p> </div>
+                <mat-icon class="icon-overlay">add</mat-icon> 
+              </div>
             </div>
           </div>
       

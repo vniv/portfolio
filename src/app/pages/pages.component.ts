@@ -85,11 +85,11 @@ export class PagesComponent implements OnInit {
   selectedCategory = 'Tous';
 
   projects = [
-    { title: 'Application mobile Blue Ice', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' },
-    { title: 'Application web Link&Trade', overlayText: 'Description du projet 1', category: 'Design', image: 'assets/java.png', link: '#' },
-    { title: 'Application Windows Simpl-E', overlayText: 'Description du projet 1', category: 'Prototype Figma', image: 'assets/java.png', link: '#' },
-    { title: 'Projet IT Grand Angle', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' },
-    { title: 'Projet IT En cours', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/java.png', link: '#' }
+    { title: 'Application mobile Blue Ice', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/blueice.mp4', link: '#' },
+    { title: 'Application web Link&Trade', overlayText: 'Description du projet 1', category: 'Design', image: 'assets/projects/link&trade.mp4', link: '#' },
+    { title: 'Application Windows Simpl-E', overlayText: 'Description du projet 1', category: 'Prototype Figma', image: 'assets/projects/simple.mp4', link: '#' },
+    { title: 'Projet IT Grand Angle', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/grandangle.mp4', link: '#' },
+    { title: 'Projet IT En cours', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/grandangle.mp4', link: '#' }
   ];
 
   get filteredProjects() {
@@ -130,6 +130,10 @@ export class PagesComponent implements OnInit {
         }
       }, 20); // Ajustez la vitesse de l'animation ici
     });
+  }
+
+  onVideoError() {
+    console.error('Erreur lors du chargement de la vidéo');
   }
 }
 

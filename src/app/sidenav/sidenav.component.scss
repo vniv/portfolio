@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
     height: 3rem;
-    color: #f3f3f3;
+    color: #9f9ba3;
     border-radius: 0.625rem;
     text-decoration: none;
     transition: color .3s ease;
@@ -94,10 +94,10 @@
 
 .sidenav-nav-item:hover .sidenav-nav-link {
     background-color: #fff;
-    color: #000;
+    color: #6C5B7B;
 }
 
 .active {
     background-color: #fff;
-    color: #000;
+    color: #6C5B7B;
 }

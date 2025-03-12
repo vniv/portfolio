@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'appbar', component: DashboardComponent },
   { path: 'dashboard', component: SidenavComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'propos', component: CoupensComponent },
+  { path: 'apropos', component: CoupensComponent },
   { path: 'pages', component: PagesComponent },
   { path: '', component: StatisticsComponent },
   { path: '**', component: StatisticsComponent }
