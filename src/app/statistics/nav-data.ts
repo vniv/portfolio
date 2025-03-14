@@ -5,7 +5,7 @@ export const navbarData = [
         label: 'Accueil'
     },
     {
-        routerLink: '/products',
+        routerLink: '/competences',
         icon: 'list',
         label: 'Mes compétences',
         items: [

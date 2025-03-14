@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pages',
@@ -18,6 +19,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   ]
 })
 export class PagesComponent implements OnInit {
+
+  constructor(private router: Router) {}
 
   @ViewChild('skillsContainer', { static: true }) skillsContainer!: ElementRef;  // Référence à l'élément HTML
 
@@ -59,11 +62,11 @@ export class PagesComponent implements OnInit {
 
   techSkills = [
     { name: 'Javascript', level: 'Intermédiaire', icon:'assets/skills/javascript.svg' },
-    { name: 'SQL', level: 'Intermédiaire', icon:'assets/skills/sql.svg'  },
-    { name: 'Angular', level: 'Les bases', color:'#4F5B93', icon:'assets/skills/angular.svg' },
-    { name: 'Git', level: 'Intermédiaire', icon:'assets/skills/git.svg' },
-    { name: 'J2EE', level: 'Les bases', icon:'assets/skills/j2ee.svg'},
-    { name: 'UX/UI', level: 'Les bases', icon:'assets/skills/html5.svg' },
+    { name: 'SQL', level: 'Intermédiaire', icon:'assets/skills/sql.png'  },
+    { name: 'Angular', level: 'Les bases', color:'#4F5B93', icon:'assets/skills/angular.png' },
+    { name: 'Git', level: 'Intermédiaire', icon:'assets/skills/git.png' },
+    { name: 'Tests unitaires / fonctionnels', level: 'Les bases', icon:'assets/skills/tutf.png'},
+    { name: 'UX/UI', level: 'Les bases', icon:'assets/skills/uxui.png' },
   ];  
   humSkills = [
     { name: 'Autonomie', level: 'Intermédiaire', icon: 'code' },
@@ -85,11 +88,11 @@ export class PagesComponent implements OnInit {
   selectedCategory = 'Tous';
 
   projects = [
-    { title: 'Application mobile Blue Ice', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/blueice.mp4', link: '#' },
-    { title: 'Application web Link&Trade', overlayText: 'Description du projet 1', category: 'Design', image: 'assets/projects/link&trade.mp4', link: '#' },
-    { title: 'Application Windows Simpl-E', overlayText: 'Description du projet 1', category: 'Prototype Figma', image: 'assets/projects/simple.mp4', link: '#' },
-    { title: 'Projet IT Grand Angle', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/grandangle.mp4', link: '#' },
-    { title: 'Projet IT En cours', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/grandangle.mp4', link: '#' }
+    { id: 2,title: 'Application mobile Blue Ice', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/blueice.mp4', link: '#' },
+    { id: 1,title: 'Application web Link&Trade', overlayText: 'Description du projet 1', category: 'Design', image: 'assets/projects/link&trade.mp4', link: '#' },
+    { id: 5,title: 'Application Windows Simpl-E', overlayText: 'Description du projet 1', category: 'Prototype Figma', image: 'assets/projects/simple.mp4', link: '#' },
+    { id: 3,title: 'Projet IT Grand Angle', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/grandangle.mp4', link: '#' },
+    { id: 4,title: 'Projet IT En cours', overlayText: 'Description du projet 1', category: 'Web', image: 'assets/projects/perso.mp4', link: '#' }
   ];
 
   get filteredProjects() {
@@ -134,6 +137,10 @@ export class PagesComponent implements OnInit {
 
   onVideoError() {
     console.error('Erreur lors du chargement de la vidéo');
+  }
+
+  routeToReal(id: number) {
+    this.router.navigate([`/realisations/${id}`]);
   }
 }
 

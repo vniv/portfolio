@@ -19,6 +19,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompetenceComponent } from './competence/competence.component';
+import { RealisationComponent } from './realisation/realisation.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     PagesComponent,
     SettingsComponent,
     BodyComponent,
-    NavbarComponent
+    NavbarComponent,
+    CompetenceComponent,
+    RealisationComponent
   ],
   imports: [
     BrowserModule,

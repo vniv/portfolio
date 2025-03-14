@@ -1,0 +1,47 @@
+<app-sidenav></app-sidenav>
+<div *ngIf="real" class="presentation-container">
+  <mat-card class="presentation-card">
+    <h1 class="title">{{real.name}}</h1>
+    <h2 class="section-title">Prélude</h2>
+    <p class="description">
+       {{real.prelude}}
+    </p>
+  </mat-card>
+
+  <mat-card class="presentation-card">
+    <h2 class="section-title">Définition et objectifs</h2>
+    <div class="valeurs">
+      
+      <p>{{real.objectif}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="presentation-card">
+    <h2 class="section-title">Etape de réalisation</h2>
+    <div class="qualites">
+      <p>{{real.etape}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="presentation-card">
+    <h2 class="section-title">Résultats du projet </h2>
+    <div class="qualites">
+      <p>{{real.resultat}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="presentation-card">
+    <h2 class="section-title">Le lendemain du projet</h2>
+    <div class="qualites">
+      <p>{{real.lendemain}}</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="presentation-card">
+    <h2 class="section-title">Réalisations associées</h2>
+    <div *ngFor ="let comp of real.comps">
+        <button (click)="routeToComp(comp.id)" mat-raised-button class="btn-real">{{comp.nameComp}}</button>
+    </div>
+    
+  </mat-card>
+</div>

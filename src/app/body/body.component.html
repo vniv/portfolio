@@ -2,7 +2,8 @@
 <section class="body" #timeline [ngClass]="getBodyClass()" id="experiences">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="subtitle">Mes expériences</h2>
+      <div class="subtitle-div"><h2 class="subtitle">Mon parcours</h2></div>
+      
       <ul class="timeline" >
         <li class="timeline-item" *ngFor="let data of dataReals">
           <div class="timeline-badge">
@@ -12,19 +13,35 @@
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">{{data.title}}</h4>
-              <p class="period">{{data.periode}}</p>
-              <p *ngIf="data.formation" class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.titre}}</p>
-              <p *ngIf="!data.formation" class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.poste}}</p>
-              <p class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.lieu}}</p>
+              <div>
+                <img [src]="data.logo"  alt="parcours logo" />
+              </div>
+              <div>
+                <h4 class="timeline-title">{{data.title}}</h4>
+                <p class="period">{{data.periode}}</p>
+              </div>              
             </div>
-            <div class="timeline-body" *ngFor="let comp of data.comps">
-                <div *ngIf="comp.isTech == true">
-                  <button class="btn-comp-tech" mat-raised-button color="primary">{{comp.btnName}}</button>
+
+            <p *ngIf="data.formation" class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.titre}}</p>
+            <p *ngIf="!data.formation" class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.poste}}</p>
+            <p class="explic"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.lieu}}</p>
+
+            <div class="timeline-body" >
+                <div>
+                  <p class="contenu"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{data.body}}</p>
                 </div>
-                <div *ngIf="comp.isTech == false">
-                  <button class="btn-comp-hum" mat-raised-button color="primary">{{comp.btnName}}</button>
-                </div>   
+                <div *ngIf="data.comps && data.comps.length > 0">
+                  <div  class="timeline-comps" *ngFor="let comp of data.comps">
+                    <div *ngIf="comp.isTech == true">
+                      <button class="btn-comp-tech" (click)="routeToComp(comp.id)" mat-raised-button color="primary">{{comp.btnName}}</button>
+                    </div>
+                    <div *ngIf="comp.isTech == false">
+                      <button class="btn-comp-hum" (click)="routeToComp(comp.id)" mat-raised-button color="primary">{{comp.btnName}}</button>
+                    </div> 
+                  </div>
+                </div>
+                
+                  
             </div>
           </div>
         </li>

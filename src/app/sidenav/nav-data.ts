@@ -11,7 +11,7 @@ export const navbarData: INavData[] = [
         ]
     },
     {
-        routerLink: '/products',
+        routerLink: '/competences',
         icon: 'list',
         label: 'Mes compétences',
         items: [

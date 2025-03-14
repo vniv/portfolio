@@ -1,5 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { experienceData } from './dataExperience';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-body',
@@ -7,6 +8,8 @@ import { experienceData } from './dataExperience';
   styleUrls: ['./body.component.scss']
 })
 export class BodyComponent {
+
+  constructor(private router: Router) {}
 
   @Input() collapsed = false;
   @Input() screenWidth = 0;
@@ -23,20 +26,7 @@ export class BodyComponent {
     return styleClass;
   }
 
-  ngAfterViewInit() {
-    this.onScroll();
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    const items = document.querySelectorAll('.timeline-item');
-    const triggerPoint = window.innerHeight * 0.8; // Déclenche à 80% de la hauteur de l'écran
-
-    items.forEach((item: any) => {
-      const rect = item.getBoundingClientRect();
-      if (rect.top < triggerPoint) {
-        item.classList.add('visible');
-      }
-    });
+  routeToComp(id?: number) {
+    this.router.navigate([`/competences/${id}`]);
   }
 }
