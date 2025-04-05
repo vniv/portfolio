@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+  
+.project-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+  
+  .project-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+  }
+
+  .project-title {
+    color: rgb(77, 71, 71);
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+    padding: 3% 0%;
+  }
+
+  .project-content {
+    font-size: 17px;
+    margin-bottom: 2%;
+  }
+
+  .project-action{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    border-top: 2px solid #ccc; 
+    font-size: 15px;
+    justify-content: center;
+    padding: 10px 0;
+  }

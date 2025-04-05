@@ -16,6 +16,16 @@ export class DashboardComponent {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     });
+
+    /*document.addEventListener("keydown", function(e) {
+      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+          e.preventDefault();
+      }
+    });*/
+    
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault(); // Bloque clic droit
+    });
   }
 
   bubbles = Array.from({ length: 30 }, () => ({
@@ -31,28 +41,5 @@ export class DashboardComponent {
   random(min: number, max: number): number {
     return Math.random() * (max - min) + min;
   }
-
-  /*sendEmail() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-
-      emailjs.send(
-        'TON_SERVICE_ID',  // Remplace par ton Service ID
-        'TON_TEMPLATE_ID', // Remplace par ton Template ID
-        formData,
-        'TA_PUBLIC_KEY'   // Remplace par ta Public Key
-      ).then(
-        (response) => {
-          console.log('Email envoyé avec succès', response);
-          alert('Message envoyé avec succès !');
-          this.contactForm.reset();
-        },
-        (error) => {
-          console.error('Erreur lors de l’envoi de l’email', error);
-          alert('Une erreur est survenue, réessayez plus tard.');
-        }
-      );
-    }
-  }*/
 
 }

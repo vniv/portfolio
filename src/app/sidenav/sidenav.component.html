@@ -1,19 +1,39 @@
-<div #sidenav class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+<div #sidenav class="sidenav">
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">
+        <button class="logo">
             <mat-icon>menu</mat-icon>
-        </button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">Menu</div>
-        
+        </button>      
     </div>
 
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let data of navData">
-           
-            <a href=""  class="sidenav-nav-link" [routerLink]="data.routerLink" #routerActive="routerLinkActive" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <mat-icon #icon class="sidenav-link-icon" >{{data.icon}}</mat-icon>
-                <span class="sidenav-link-text" @fadeInOut *ngIf="!collapsed">{{data.label}}</span>
+            <!-- Élément principal avec toggle -->
+            <a [routerLink]="data.routerLink" class="sidenav-nav-link"
+                #routerActive="routerLinkActive" routerLinkActive="active" 
+                [routerLinkActiveOptions]="{exact: true}" 
+               (click)="toggleSubmenu(data.label, $event)">
+                <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
+                <span class="sidenav-link-text">{{data.label}}</span>
+                <span class="arrow" *ngIf="data.items">▶</span> 
             </a>
+        
+            <!-- Sous-menu qui reste affiché si toggleSubmenu a été activé -->
+            <ul class="submenu" *ngIf="submenuOpen[data.label]">
+                <li *ngFor="let child of data.items" class="submenu-item">
+                    <a [routerLink]="child.routerLink" class="submenu-link">
+                        {{child.label}}
+                    </a>
+        
+                    <!-- Sous-menu de deuxième niveau en hover -->
+                    <ul class="submenu sub-submenu" *ngIf="child.items">
+                        <li *ngFor="let subChild of child.items">
+                            <a [routerLink]="subChild.routerLink" class="submenu-link">
+                                {{subChild.label}}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>

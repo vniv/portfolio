@@ -21,6 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CompetenceComponent } from './competence/competence.component';
 import { RealisationComponent } from './realisation/realisation.component';
+import { PresentationComponent } from './test/test.component';
+import { RealisationsComponent } from './realisations/realisations.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RealisationComponent } from './realisation/realisation.component';
     BodyComponent,
     NavbarComponent,
     CompetenceComponent,
-    RealisationComponent
+    RealisationComponent,
+    PresentationComponent,
+    RealisationsComponent
   ],
   imports: [
     BrowserModule,

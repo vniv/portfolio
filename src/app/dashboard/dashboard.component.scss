@@ -103,5 +103,8 @@
 
   .footer-item-call {
     filter: blur(3px);
+    -webkit-user-select: none; /* Pour Chrome, Safari */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none; 
   }
   

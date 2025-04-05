@@ -6,50 +6,11 @@
   
     <!-- Exemple pour une section de compétences -->
      <section id="competences">
-
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="skillsItem-item" *ngFor="let skill of techSkills">
-            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
-            <div class="skillsItem-text">
-              <strong>{{ skill.name }}</strong>
-              <span>{{ skill.level }}</span>
-            </div>
-          </div>
-          <!-- Duplication des logos pour l'effet infini -->
-          <div class="skillsItem-item" *ngFor="let skill of techSkills">
-            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
-            <div class="skillsItem-text">
-              <strong>{{ skill.name }}</strong>
-              <span>{{ skill.level }}</span>
-            </div>
-          </div>
-          <div class="skillsItem-item" *ngFor="let skill of techSkills">
-            <img [src]="skill.icon"  alt="skill logo" class="carousel-logo" />
-            <div class="skillsItem-text">
-              <strong>{{ skill.name }}</strong>
-              <span>{{ skill.level }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-test></app-test>
       <div class="skillsItem">
           
-
-          <div class="skillsItem-cards">
-            <mat-card class="skillsItem-card">
-              <h3>Compétences humaines</h3>
-              <div class="skillsItem-grid">
-                <div class="skillsItem-item" *ngFor="let skill of humSkills">
-                  <mat-icon class="skillsItem-icon">{{ skill.icon }}</mat-icon>
-                  <div class="skillsItem-text">
-                    <strong>{{ skill.name }}</strong>
-                    <span>{{ skill.level }}</span>
-                  </div>
-                </div>
-              </div>
-            </mat-card>
-          </div>
+        
+       
       </div>
       <div *ngFor="let skill of skills" class="skill">
         <span>{{ skill.name }}</span>
@@ -101,7 +62,7 @@
         
         <!-- Bouton pour télécharger le PDF -->
         <a href="assets/CV_ValentinNivesse.pdf" download>
-        <button mat-raised-button>Télécharger CV en PDF</button>
+        <button class="cv-btn" mat-raised-button>Télécharger CV en PDF</button>
         </a>
     </section>
 

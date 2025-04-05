@@ -1,0 +1,14 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+    <mat-card class="project-card" *ngFor="let project of projects">
+      <img mat-card-image [src]="project.image" [alt]="project.title + ' logo'" class="project-logo" />
+      <mat-card-title class="project-title">{{ project.title }}</mat-card-title>
+      <mat-card-content class="project-content">
+        <p>{{ project.description }}</p>
+      </mat-card-content>
+      <mat-card-actions class="project-action">
+        <a mat-button class="project-btn" color="primary" [routerLink]="project.link">Voir le détail</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+<app-dashboard></app-dashboard>

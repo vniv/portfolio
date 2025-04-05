@@ -8,6 +8,8 @@ import { PagesComponent } from './pages/pages.component';
 import { CoupensComponent } from './coupens/coupens.component';
 import { CompetenceComponent } from './competence/competence.component';
 import { RealisationComponent } from './realisation/realisation.component';
+import { PresentationComponent } from './test/test.component';
+import { RealisationsComponent } from './realisations/realisations.component';
 
 const routes: Routes = [
   { path: 'appbar', component: DashboardComponent },
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'competences', component: ProductsComponent },
   { path: 'competences/:id', component: CompetenceComponent },
   { path: 'realisations/:id', component: RealisationComponent },
+  { path: 'realisations', component: RealisationsComponent},
   { path: 'apropos', component: CoupensComponent },
+  { path: 'test', component: PresentationComponent },
   { path: 'pages', component: PagesComponent },
   { path: '', component: StatisticsComponent },
   { path: '**', component: StatisticsComponent }

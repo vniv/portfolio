@@ -1,5 +1,5 @@
 export interface INavData {
-    routerLink : string;
+    routerLink ?: string;
     icon?: string;
     label: string;
     expanded?: boolean;

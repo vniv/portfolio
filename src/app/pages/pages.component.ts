@@ -41,7 +41,7 @@ export class PagesComponent implements OnInit {
     { name: 'SQL', value: 75, currentValue: 0, color:'#264de4', icon:'assets/skills/sql.svg' },
     { name: 'ANGULAR', value: 60, currentValue: 0, color:'#4F5B93', icon:'assets/skills/angular.svg' },
     { name: 'GIT', value: 50, currentValue: 0, color:'#21759B', icon:'assets/skills/git.svg' },
-    { name: 'J2EE', value: 45, currentValue: 0, color:'#00758F', icon:'assets/skills/j2ee.svg' },
+    { name: 'TESTING', value: 45, currentValue: 0, color:'#00758F', icon:'assets/skills/j2ee.svg' },
     { name: 'UX/UI', value: 90, currentValue: 0, color:'#E76F00', icon:'assets/skills/html5.svg' },
     { name: 'AGILITE', value: 85, currentValue: 0, color:'#222', icon:'assets/skills/agilite.svg' },
     { name: 'RESOLUTION DE PROBLEME', value: 70, currentValue: 0, color:'#F7DF1E', icon:'assets/skills/problem-solving.svg' },
