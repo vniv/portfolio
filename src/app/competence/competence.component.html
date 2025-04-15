@@ -3,7 +3,7 @@
   <mat-card class="presentation-card">
     <h1 class="title">{{comp.nom}}</h1>
     <h2 class="section-title">Définition</h2>
-    <p class="description">
+    <p class="contenu"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>
        {{comp.paragraphe1}}
     </p>
   </mat-card>
@@ -12,23 +12,29 @@
     <h2 class="section-title">Mon Expérience vécue</h2>
     <div class="valeurs">
       
-      <p>{{comp.paragraphe2}}</p>
+      <p class="contenu"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{comp.paragraphe2}}</p>
     </div>
   </mat-card>
 
   <mat-card *ngIf="comp.paragraphe3" class="presentation-card">
     <h2 class="section-title">Niveau de compétence</h2>
     <div class="qualites">
-      <p>{{comp.paragraphe3}}</p>
+      <p class="contenu"><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>{{comp.paragraphe3}}</p>
     </div>
   </mat-card>
 
   <mat-card class="presentation-card">
     <h2 class="section-title">Réalisations associées</h2>
-    <div *ngFor ="let projet of comp.reals">
-        <button (click)="routeToReal(projet.id)" mat-raised-button class="btn-real">{{projet.name}}</button>
+    <div class="reals">
+      <button *ngFor="let projet of comp.reals"
+              (click)="routeToReal(projet.id)"
+              mat-raised-button
+              class="btn-real">
+        {{projet.name}}
+      </button>
     </div>
     
   </mat-card>
 </div>
+<app-dashboard></app-dashboard>
 

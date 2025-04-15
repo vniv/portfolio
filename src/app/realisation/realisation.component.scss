@@ -4,21 +4,24 @@
     align-items: center;
     gap: 20px;
     padding: 40px;
-    background: linear-gradient(to bottom, #0f1b2d, #1a2333);
     min-height: 100vh;
+    padding-top: 5%;
+    margin-bottom: 4%;
   }
   
   .presentation-card {
-    width: 90%;
+    width: 70%;
     background: rgba(255, 255, 255, 0.1);
     color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0);
   
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.1);
     }
   }
   
@@ -40,18 +43,7 @@
     line-height: 1.6;
     text-align: justify;
   }
-  
-  mat-chip-list {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 10px 0;
-  }
-  
-  mat-chip {
-    font-weight: bold;
-    padding: 10px;
-  }
+
   
   .interets {
     list-style: none;
@@ -67,9 +59,21 @@
     }
   }
 
-  .btn-real {
+  .btn-comp {
     right: 0;
     margin: 15px 20px 15px 20px;
     background-color: #4A50A3 !important;
     color: white !important;
+  }
+
+  .contenu {
+    white-space: pre-line;
+  }
+
+  .comps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* ou 'flex-start' si tu préfères les aligner à gauche */
+    flex-wrap: wrap; /* si tu veux qu’ils aillent à la ligne si y en a trop */
+    gap: 10px; /* espace entre les boutons */
   }

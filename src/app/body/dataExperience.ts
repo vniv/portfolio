@@ -8,7 +8,7 @@ export const experienceData = [
         logo: 'assets/ESIEA_logo.png',
         lieu: 'Esiea Dax',
         formation: true,
-        body: 'Les cycles Mastères se composent de 4 semestres en alternance (découvrir les entreprises partenaires), qui permettent aux apprenants de devenir expert en informatique et pendant lesquels ils font leurs premiers pas dans la vie professionnelle en tant que collaborateur à part entière. En cycle Mastère, les apprenants se plongent dans leur future carrière de spécialistes confirmés en informatique !\n Le Cycle Mastère se déroule entièrement en alternance. L’ensemble des cours théoriques sont réalisés en ligne. En début d’année, tous les apprenants bénéficient d’un accompagnement personnalisé pour s’assurer qu’ils trouvent le poste qui correspond le mieux à leur profil et à leur projet. Les mastères Bac+5 comprennent deux formations d’experts titrées RNCP de niveau 7, en « Expertise d’ingénierie du développement d’applications » et en « Architecture Cloud, DevSecOps & Cybersécurité« .',
+        body: 'Les cycles Mastères se composent de 4 semestres en alternance (découvrir les entreprises partenaires), qui permettent aux apprenants de devenir expert en informatique et pendant lesquels ils font leurs premiers pas dans la vie professionnelle en tant que collaborateur à part entière. En cycle Mastère, les apprenants se plongent dans leur future carrière de spécialistes confirmés en informatique !\n\n Le Cycle Mastère se déroule entièrement en alternance. L’ensemble des cours théoriques sont réalisés en ligne. En début d’année, tous les apprenants bénéficient d’un accompagnement personnalisé pour s’assurer qu’ils trouvent le poste qui correspond le mieux à leur profil et à leur projet. Les mastères Bac+5 comprennent deux formations d’experts titrées RNCP de niveau 7, en « Expertise d’ingénierie du développement d’applications » et en « Architecture Cloud, DevSecOps & Cybersécurité« .',
         comps: []
     },
     {
@@ -20,7 +20,7 @@ export const experienceData = [
         logo: 'assets/CGI_logo.png',
         lieu: 'CGI Bordeaux',
         formation: false,
-        body: 'Durant mon alternance, j’ai dû répondre à des missions en tant que développeurs Full-Stack au sein de l’équipe Grand Angle tels que l’intégration de nouvelles fonctionnalités, la résolution de problème par le biais de ticket de maintenance d’application. La vision de Grand Angle sur l’aide apportée aux apprentis dans leur avancement de projet professionnel me permet grande d’améliorer mes capacités de développeur Full-Stack. Ainsi, j’évolue constament sur me scompétences tehcniques et aussi humaines essentielles à atteindre mon ojectif de vie d’être un développeur web polyvalent pouvant répondre à tous types de demandes et qui sait s’adapter à l’environnement dans lequel il évolue.',
+        body: 'Durant mon alternance, j’ai dû répondre à des missions en tant que développeurs Full-Stack au sein de l’équipe Grand Angle tels que l’intégration de nouvelles fonctionnalités, la résolution de problème par le biais de ticket de maintenance d’application. La vision de Grand Angle sur l’aide apportée aux apprentis dans leur avancement de projet professionnel me permet grande d’améliorer mes capacités de développeur Full-Stack. \n\nAinsi, j’évolue constament sur me scompétences tehcniques et aussi humaines essentielles à atteindre mon ojectif de vie d’être un développeur web polyvalent pouvant répondre à tous types de demandes et qui sait s’adapter à l’environnement dans lequel il évolue.',
         comps : [
             {
                 id: 1,
@@ -82,13 +82,13 @@ export const experienceData = [
 
             L’objectif de ce programme est de former des professionnels de l’Ingénierie du logiciel capables de :
 
-            Maquetter une application
-            Développer une interface utilisateur de type desktop ou mobile
-            Concevoir et mettre en place une base de données
-            Concevoir une application mobile
-            Préparer et exécuter des plans de tests d’une application
-            Préparer le déploiement d’une application
-            Stage découverte : Durant les 2 premières années du bachelor, l’étudiant réalise un mois minimum en stage au sein d’une entreprise afin d’acquérir plus d’expérience professionnelle.`,
+            - Maquetter une application
+            - Développer une interface utilisateur de type desktop ou mobile
+            - Concevoir et mettre en place une base de données
+            - Concevoir une application mobile
+            - Préparer et exécuter des plans de tests d’une application
+            - Préparer le déploiement d’une application
+            - Stage découverte : Durant les 2 premières années du bachelor, l’étudiant réalise un mois minimum en stage au sein d’une entreprise afin d’acquérir plus d’expérience professionnelle.`,
         comps : []
     },
     {
@@ -100,7 +100,7 @@ export const experienceData = [
         logo: 'assets/CGI_logo.png',
         lieu: 'CGI Bordeaux',
         formation: false,
-        body: `Mon stage au sein de l'aquipe Grand Angle fut ma première expérience professionnel, dans une grande entreprise internationale commée CGI. L'outil sur lequel j'ai appliqué mes premières compétences de développeur est une application web permettant un suivi financier très complet pour les collectivités de France. J'ai su m'adapter pour répondre aux attentes de CGI au sujet des travaux à réaliser pour un stagiaire développeur, ceux-ci étant variés (intégration de nouvelles fonctionnalités avec rédaction de documents techniques, résoudre des problèmes fonctionnels, réaliser des télémaintenances, etc...). Pour cela, une autonomie m'a été demandé rapidement et un comportement professionnel encadrant mes réalisations m'ont permis de définir les points techniques / humains sur lesquels je devais encore travailler pour m'approcher d'un bon profil technique`,
+        body: `Mon stage au sein de l'aquipe Grand Angle fut ma première expérience professionnel, dans une grande entreprise internationale commée CGI. L'outil sur lequel j'ai appliqué mes premières compétences de développeur est une application web permettant un suivi financier très complet pour les collectivités de France. \n\nJ'ai su m'adapter pour répondre aux attentes de CGI au sujet des travaux à réaliser pour un stagiaire développeur, ceux-ci étant variés (intégration de nouvelles fonctionnalités avec rédaction de documents techniques, résoudre des problèmes fonctionnels, réaliser des télémaintenances, etc...). Pour cela, une autonomie m'a été demandé rapidement et un comportement professionnel encadrant mes réalisations m'ont permis de définir les points techniques / humains sur lesquels je devais encore travailler pour m'approcher d'un bon profil technique`,
         comps : [
             {
                 id: 4,
@@ -150,11 +150,11 @@ export const experienceData = [
         title: 'Licence CCRSEE',
         periode: '09/2019 - 08/2020',
         poste: '',
-        titre: 'Conception et Commande de Systèmes Electriques Embarqués',
+        titre: 'Conception et Commande de Systèmes Electriques Embarqués : RNCP n°29962',
         logo: 'assets/IUT_logo.png',
         lieu: 'Institut universitaire techniquee Tarbes',
         formation: true,
-        body: '.',
+        body: `Conception, simulation et mise en oeuvre de systèmes électroniques au sein de bureaux d'études, services techniques d'un grand groupe, PME ou TPE. Production, déploiement et maintenance de systèmes électroniques. Mise au point de procédures de test sur des systèmes électroniques pour s'assurer de la conformité avec les spécifications de conception. Elaboration et/ou amélioration de l'application logicielle embarquée d'un système électronique. Dimensionner et prédire les performances d'un système électronique. \n\nTester et valider les divers dispositifs constituant un système électronique à l'aide d'appareils de mesure dédiés. Utiliser les outils de simulation actuels pour illustrer et analyser le fonctionnement d'un système électronique. Organiser des résultats obtenus au cours de tests pour produire un rapport écrit et/ou oral. Communiquer par oral et par écrit, de façon claire et non-ambiguë, dans au moins une langue étrangère, en particulier être capable de tenir une conversation sur un sujet technique, analyser une documentation technique et formuler une notice d'utilisation.`,
         comps : []
     },
     {
@@ -166,23 +166,14 @@ export const experienceData = [
         logo: 'assets/ENI_logo.png',
         lieu: 'Ecole National des Ingénieurs de Tarbes',
         formation: true,
-        body: `La base de la formation (étudiante ou apprentissage) repose sur un socle commun comprenant 3 pôles :
+        body: `La base de la formation (étudiante ou apprentissage) repose sur un socle commun comprenant 3 pôles :les sciences de base (Mathématiques, Physique, Chimie, Électricité..), les sciences de l’ingénieur (Mécanique, Conception, Impression 3D, Modélisation et simulation, Robotique, Informatique industrielle, Électricité, Automatisme, Énergie renouvelable, Gestion de Production, Matériaux métalliques/polymères, Ingénierie du BTP
+Langues) et les sciences Humaines Économiques et Sociales : Anglais en LV1, LV2 : Espagnol-Allemand-Portugais-Chinois-Italien, Communication, Économie d’entreprise, Sport, Gestion de projet, Management. \n\n\tDès la 1ère année, en parallèle des cours scientifiques, les élèves suivent des cours techniques et pratiques. Ils ont alors 3 formats d'enseignement : les cours, les travaux dirigés (24 élèves), les travaux pratiques (12 élèves). En formation étudiante, l'étudiant pourra se perfectionner dans un domaine à partir de la 4ème année :
 
-les sciences de base (Mathématiques, Physique, Chimie, Électricité..), les sciences de l’ingénieur (Mécanique, Conception, Impression 3D, Modélisation et simulation, Robotique, Informatique industrielle, Électricité, Automatisme, Énergie renouvelable, Gestion de Production, Matériaux métalliques/polymères, Ingénierie du BTP
-Langues) et les sciences Humaines Économiques et Sociales : Anglais en LV1, LV2 : Espagnol-Allemand-Portugais-Chinois-Italien, Communication, Économie d’entreprise, Sport, Gestion de projet, Management
- 
-
-Dès la 1ère année, en parallèle des cours scientifiques, les élèves suivent des cours techniques et pratiques. Ils ont alors 3 formats d'enseignement : les cours, les travaux dirigés (24 élèves), les travaux pratiques (12 élèves).
-
- 
-
-En formation étudiante, l'étudiant pourra se perfectionner dans un domaine à partir de la 4ème année :
-
-Génie Mécanique /
-Génie Industriel /
-Bâtiment Travaux Publics /
-Conception des Systèmes Intégrés /
-Génie des Matériaux de Structures et Procédés`,
+- Génie Mécanique 
+- Génie Industriel 
+- Bâtiment Travaux Publics 
+- Conception des Systèmes Intégrés 
+- Génie des Matériaux de Structures et Procédés`,
         comps : []
     },
     {
@@ -194,8 +185,7 @@ Génie des Matériaux de Structures et Procédés`,
         logo: 'assets/BTS_logo.jpg',
         lieu: 'Lycée Saint Cricq de Pau',
         formation: true,
-        body: `Le technicien conçoit et met au point des outillages et machines spéciales pour assurer la fabrication d’un produit en série. La formation comporte l'étude, la mise au point et la maintenance du processus de production. Les systèmes réalisés sont pluri-technologiques. Les réalisations sont concrètes et portent sur des équipements industriels construits pour le compte d’entreprises de la région béarnaise et font partie intégrante de l’évaluation finale. Etudes des domaines techniques de la mécanique, l’électricité, le pneumatique et l’hydraulique. Conception d’un système industriel avec le logiciel de Conception Assistée parOrdinateur SolidWorks. Conception des schémas de câblage électrique, pneumatique et hydraulique. Programmation des automates industriels Schneider Electric et Siemens
-        Réalisation des systèmes automatisés. Apprentissage de la programmation des robots Industriels FANUC. Gestion d’un projet industriel ; cahier descharges fonctionnelles, devis, planification, gestion des tâches, mise en service etvalidation des solutions techniques grâce à l’utilisation des logiciels de bureautique ou dédiés à l’organisation de projet (Mindview)`,
+        body: `Le technicien conçoit et met au point des outillages et machines spéciales pour assurer la fabrication d’un produit en série. La formation comporte l'étude, la mise au point et la maintenance du processus de production. Les systèmes réalisés sont pluri-technologiques. Les réalisations sont concrètes et portent sur des équipements industriels construits pour le compte d’entreprises de la région béarnaise et font partie intégrante de l’évaluation finale. Etudes des domaines techniques de la mécanique, l’électricité, le pneumatique et l’hydraulique. \n\nConception d’un système industriel avec le logiciel de Conception Assistée parOrdinateur SolidWorks. \n\nConception des schémas de câblage électrique, pneumatique et hydraulique. \n\nProgrammation des automates industriels Schneider Electric et Siemens. Réalisation des systèmes automatisés. Apprentissage de la programmation des robots Industriels FANUC. Gestion d’un projet industriel ; cahier descharges fonctionnelles, devis, planification, gestion des tâches, mise en service etvalidation des solutions techniques grâce à l’utilisation des logiciels de bureautique ou dédiés à l’organisation de projet (Mindview)`,
         comps : []
     }
 ];

@@ -47,9 +47,9 @@ export const navbarData: INavData[] = [
             { label: 'Simpl-E', routerLink: '/realisations/5' },
         ]
     },
-    {
+    /*{
         routerLink: '/settings',
         icon: 'forum',
         label: 'Contact',
-    },
+    },*/
 ];

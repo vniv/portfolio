@@ -27,7 +27,7 @@
                     <!-- Sous-menu de deuxième niveau en hover -->
                     <ul class="submenu sub-submenu" *ngIf="child.items">
                         <li *ngFor="let subChild of child.items">
-                            <a [routerLink]="subChild.routerLink" class="submenu-link">
+                            <a (click)="backToggle(data.label)" [routerLink]="subChild.routerLink" class="submenu-link">
                                 {{subChild.label}}
                             </a>
                         </li>

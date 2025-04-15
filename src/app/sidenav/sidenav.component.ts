@@ -26,8 +26,17 @@ export class SidenavComponent implements OnInit {
 
   submenuOpen: { [key: string]: boolean } = {};
 
-  toggleSubmenu(key: string, event: Event): void {
+  toggleSubmenu(keyToggle: string, event: Event): void {
     event.preventDefault();
-    this.submenuOpen[key] = !this.submenuOpen[key];
+    this.submenuOpen[keyToggle] = !this.submenuOpen[keyToggle];
+    for (let key in this.submenuOpen) {
+      if (key !== keyToggle) {
+        this.submenuOpen[key] = false;
+      }
+    }
+  }
+
+  backToggle(key: string): void {
+    this.submenuOpen = {};
   }
 }
