@@ -1,19 +1,16 @@
 <div #skillsContainer class="skills-container">
-    <h2>COMPÉTENCES</h2>
-    <p>
-      Elles sont en constantes améliorations car pour moi la joie de ce métier fait que l'on en apprend tous les jours, d'autant plus en étant impliqué, curieux et passionné.
-    </p>
-  
     <!-- Exemple pour une section de compétences -->
      <section id="competences">
       <app-test></app-test>
       <div class="skillsItem">
-          
+        <p class="contenu">
+          Elles sont en constantes améliorations car pour moi la joie de ce métier fait que l'on en apprend tous les jours, d'autant plus en étant impliqué, curieux et passionné.
+        </p>
         
        
       </div>
       <div *ngFor="let skill of skills" class="skill">
-        <span>{{ skill.name }}</span>
+        <span class="skill-name">{{ skill.name }}</span>
         <div class="progress-container" (mouseover)="hoveredSkill = skill" (mouseleave)="hoveredSkill = null">
           <mat-progress-bar mode="determinate" [value]="skill.value"></mat-progress-bar>
           <span class="progress-value" *ngIf="hoveredSkill === skill">{{ skill.value }}%</span>
@@ -42,6 +39,7 @@
               <video *ngIf="project.image" class="background-video" [src]="project.image" autoplay loop muted (error)="onVideoError()"></video>
               <div class="overlay">
                 <mat-icon (click)="routeToReal(project.id)" class="icon-overlay">add</mat-icon> 
+                <p class="project-title">{{project.title}}</p>
               </div>
             </div>
           </div>
@@ -54,7 +52,7 @@
 
     <!-- Section affichage du CV -->
     <section id="cv" class="cv-section">
-        <h2>Mon CV</h2>
+        <h2 class="subtitle">Mon CV</h2>
         <!-- Affichage du PDF dans un iframe -->
         <div class="image-container">
             <img src="assets/CV.png" alt="CV Image" />

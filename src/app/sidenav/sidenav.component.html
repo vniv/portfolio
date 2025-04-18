@@ -1,17 +1,21 @@
 <div #sidenav class="sidenav">
     <div class="logo-container">
-        <button class="logo">
-            <mat-icon>menu</mat-icon>
-        </button>      
+        <div class="name">
+            <p> Valentin Nivesse</p> 
+        </div>
+        <a class="logo" href="https://www.linkedin.com/in/valentin-nivesse-7aab66199/"><img src="assets/linkedin.png" alt="LinkedIn" style="width: 25px;" /></a>
+        <a class="logo" href="https://github.com/vniv"><img src="assets/github.png" alt="GitHub" style="width: 25px;" /></a>  
     </div>
 
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let data of navData">
             <!-- Élément principal avec toggle -->
-            <a [routerLink]="data.routerLink" class="sidenav-nav-link"
-                #routerActive="routerLinkActive" routerLinkActive="active" 
+            <a [routerLink]="data.routerLink || null" 
+                class="sidenav-nav-link"
+                #routerActive="routerLinkActive" 
+                routerLinkActive="active" 
                 [routerLinkActiveOptions]="{exact: true}" 
-               (click)="toggleSubmenu(data.label, $event)">
+                (click)="data.items ? toggleSubmenu(data.label, $event) : null">
                 <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
                 <span class="sidenav-link-text">{{data.label}}</span>
                 <span class="arrow" *ngIf="data.items">▶</span> 
@@ -27,7 +31,7 @@
                     <!-- Sous-menu de deuxième niveau en hover -->
                     <ul class="submenu sub-submenu" *ngIf="child.items">
                         <li *ngFor="let subChild of child.items">
-                            <a (click)="backToggle(data.label)" [routerLink]="subChild.routerLink" class="submenu-link">
+                            <a (click)="backToggle()" [routerLink]="subChild.routerLink" class="submenu-link">
                                 {{subChild.label}}
                             </a>
                         </li>

@@ -36,7 +36,7 @@ export class SidenavComponent implements OnInit {
     }
   }
 
-  backToggle(key: string): void {
+  backToggle(): void {
     this.submenuOpen = {};
   }
 }

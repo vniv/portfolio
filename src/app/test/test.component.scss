@@ -37,6 +37,13 @@ body{
 }
 
 .banner .slider .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
     position: absolute;
     inset: 0 0 0 0;
     transform: 
@@ -46,7 +53,8 @@ body{
 .banner .slider .item img{
     width: 100%;
     height: 80%;
-    object-fit: cover;
+    max-height: 200px;
+    object-fit: contain;
 }
 
 .skill-title{
@@ -102,7 +110,7 @@ body{
     background-position: top center;
     z-index: 1;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 2000px) {
     .banner .slider{
         width: 160px;
         height: 200px;
@@ -117,10 +125,9 @@ body{
         text-align: center;
         width: 100%;
         text-shadow: 0 10px 20px #000;
-        font-size: 7em;
+        font-size: 4em;
     }
     .banner .content .author{
-        color: #fff;
         padding: 20px;
         text-shadow: 0 10px 20px #000;
         z-index: 2;
@@ -133,8 +140,14 @@ body{
 @media screen and (max-width: 767px) {
     .banner .slider{
         width: 100px;
-        height: 150px;
+        height: 120px;
         left: calc(50% - 50px);
+    }
+    .banner .slider .item img {
+        max-height: 60px;
+    }
+    .banner .content h1 {
+        font-size: 2em;
     }
     .banner .slider .item{
         transform: 
@@ -143,5 +156,28 @@ body{
     }
     .banner .content h1{
         font-size: 5em;
+    }
+    .banner .content .author {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner .slider {
+        width: 80px;
+        height: 120px;
+        left: calc(50% - 40px);
+    }
+
+    .banner .slider .item img {
+        max-height: 60px;
+    }
+
+    .banner .content h1 {
+        font-size: 1em;
+    }
+
+    .banner .content .author {
+        font-size: 0.9em;
     }
 }

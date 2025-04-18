@@ -1,3 +1,7 @@
+.contenu {
+  font-size: large;
+}
+
 .skills-container {
   background-color: #ffffff;  /* Fond de couleur #0a192f */
   color: rgb(0, 0, 0);  /* Couleur de texte blanche pour contraste */
@@ -20,6 +24,9 @@
 
 .skill {
   margin-bottom: 20px;  /* Espace entre les compétences */
+}
+.skill-name {
+  font-size: 1rem;
 }
 
 .skill span {
@@ -136,7 +143,7 @@ $card-bg: #6C5B7B;
 // Titres
 .subtitle {
   color: lighten($primary-color, 20%);
-  font-size: 1.8rem;
+  font-size: 2.5rem !important;
   margin-bottom: 0.5rem;
 }
 
@@ -197,14 +204,6 @@ $card-bg: #6C5B7B;
   align-items: center;
   padding: 2rem;
 }
-
-// Titres
-.subtitle {
-  color: lighten($primary-color, 20%);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -283,14 +282,19 @@ $card-bg: #6C5B7B;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(247, 158, 27, 0.7);
+  background-color: rgba(247, 158, 27, 0.8);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   opacity: 0;
-  transition: opacity 0.3s ease 0.2s; /* Ajout du délai pour l'apparition du texte */
-  box-sizing: border-box; /* Assure que le padding n'affecte pas la taille de l'overlay */
+  transition: opacity 0.3s ease 0.2s;
+  box-sizing: border-box;
+
+  .project-title {
+    color: #ffffff;
+  }
 
   .icon-overlay {
     font-size: 50px;
