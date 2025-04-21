@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -141,6 +141,17 @@ export class PagesComponent implements OnInit {
 
   routeToReal(id: number) {
     this.router.navigate([`/realisations/${id}`]);
+  }
+
+  @ViewChildren('videoRef') videos!: QueryList<ElementRef<HTMLVideoElement>>;
+  ngAfterViewInit() {
+    this.videos.forEach(videoEl => {
+      const el = videoEl.nativeElement;
+      el.muted = true; // Certains navigateurs demandent ça même si déjà dans le HTML
+      el.play().catch(err => {
+        console.warn('Autoplay bloqué :', err);
+      });
+    });
   }
 }
 
