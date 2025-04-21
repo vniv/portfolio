@@ -21,8 +21,8 @@ const routes: Routes = [
   { path: 'apropos', component: CoupensComponent },
   { path: 'test', component: PresentationComponent },
   { path: 'home', component: StatisticsComponent },
-  { path: '', component: StatisticsComponent },
-  { path: '**', component: StatisticsComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
   
 ];
 
